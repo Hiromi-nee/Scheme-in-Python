@@ -1,0 +1,96 @@
+A text-based adventure in which four will have to cooperate in order to defeat the evil Crimson King and retrieve the flag.
+
+The puzzle is extremely dynamic, and tests the following:
+1. Lateral Thinking
+2. Scripting
+3. A Limited Form of Artificial Intelligence
+4. Network Protocol Analysis
+5. Script Reverse Engineering
+6. Regex and Pattern Matching
+7. Algorithms
+
+The world would be a thematic vehicle for a series of puzzles. Most of the puzzles would be In-Character (IC), but some might involve breaking down the forth wall to expose the technical holes in the program.
+
+The world would be dynamic, all participants in a group and between groups may interact.
+
+It would be accessed through any MUD client or through nc.
+
+A client written in Python might be provided. The client would contain the necessary elements to start off the rudimentary beginnings of constructs such as aliases and triggers.
+
+Network Topology Diagram
+,___________,    ,___________,    ,___________,
+|  Group 1  |    |  Group 2  |    |  Group 3  |
+  |1|2|3|4|        |1|2|3|4|        |1|2|3|4|
+   | | | |          | | | |          | | | |
+,______________________________________________,
+|                  The World                   |
+`----------------------------------------------'
+
+Gameplay
+Each person in a group will be put in control of one of four characters. 
+These four characters will make up a Band of Adventurers.
+A Band is made up of one or more of the following:
+1. Paladin - The Healer
+2. Rogue - The Ranged Support
+3. Knight - The Damager
+4. Wizard - The Magical Support
+
+Players may choose their Class, Race and Gender
+
+However to complete the game, the abilities from all four classes is required so players have to make the choice to be a balanced Band. Players will be allowed to change their class at the expense of something (experience?).
+
+Players will be penalised for being Out-of-Character (OOC).
+
+Scripting is allowed to automate tasks. For example, curing in the game would require extensive scripting because as time progresses, human limits would be reached when fighting opponents who dish out afflictions too fast to cure by hand typing the cures. Also, farming.
+
+However, scripting will not be the be all and end all of the game. Human decisions will still have to be made.
+
+Navigation will be through a cartesian world where the directions are North, South, East, West, In, Out, Up, Down.
+
+The game will attempt to be as free-to-explore as possible, avoiding a linear timeline.
+
+Experience points, items and gold would be included as a form of progression.
+
+Player v. Player combat would also be allowed (as players would be considered an entity like other NPCs).
+
+Possible puzzles:
+To start with, we would want to emphasise the open but storyline-based gameplay and perhaps a tutorial-like introduction culmunating in a small amount of programming. For example, a linear tutorial that culmunates in a linear quest requiring the Band to combat cave spiders and retrieve an orb of power that the spider queen stole. At the deliverance of the orb of power, four unique weapons: A mace for the Paladin, A bow and quiver for the Rogue, A longsword for the Knight and a staff of magic for the Wizard are bestowed upon the adventurers. The adventurers are then given a magic word and then teleported to the real world.
+
+Some more radical puzzles may take a twist in the plot such as reaching the boundary of the land and require the adventurers to break through this boundary only by speaking numbers that are echoed back by a wailing wall. The solution would be to overflow the memory to cause a certain number to stick in the memory banks and then allow the adventurers to venture into the matrix world. There they will pluck the flag out of a memory bank and return to their realm or perhaps travel to other realms.
+
+Time in the game will be counted as ticks. Each tick represents a quanta in the passage of time and artificially slow processes down so that human interfaces might react appropriately to events in the world. We shall set the default length of a tick to be 0.25 seconds. That is, four ticks to a second.
+
+Implementation
+
+Client IN  <------- [Server OUT] <-- [Adventurer View] <------  [Internal Simulation]
+                                                                |       of the      | <--> (PostgreSQL Database)
+Client OUT -------> [Server IN ] --> [Command Translatator] --> [       World       ]
+
+
+Data to Store
+
+These are the basic types:
+1. Entities (NPCs, PCs, Objects)
+2. Locations
+
+There are associated meta-data to store w.r.t. the basic types:
+1. Commands (or commonly referred as Abilities) (Entity)
+2. Afflictions (Entity)
+3. Interactions (Entity & Location)
+4. Geospatial Associations (Location)
+
+Locations
+Data:
+1. Description
+2. List of Geospatial Associations
+3. List of Interactions
+4. Title
+5. Unique Location ID
+
+Entities
+Data:
+1. Unique Entity ID
+2. Type (sword, adventurer, elf)
+3. List of Interactions
+4. List of Command Permissions
+5. Possessions

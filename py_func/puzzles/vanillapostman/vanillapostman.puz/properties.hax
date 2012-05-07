@@ -1,0 +1,44 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Vanilla Postman</title>
+  <category>Network</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>100</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+    <file>
+      <hash>c37eb36f8bed854876d68b7cd5839d1a</hash>
+      <filename>c37eb36f8bed854876d68b7cd5839d1a.pcap</filename>
+    </file>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	     I have managed to make a capture of the packets Alice's computer sent to and received from the Internet.<br />
+	     <br />
+	     Please find the email and password to log in to http://www.codesinverse.com/dismailv.<br />
+	     Leave your answer in the format md5(email:password). All fields are lowercase.
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>lol, you don't need a hint for this one.</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/647199d5d9a2851981431e6d176c48d0/i</flag>
+    <model>Use Wireshark, and filter for http and http.request.method==POST. Search for the sign in request and look at the POST data sent.</model>
+  </solution>
+
+</properties>

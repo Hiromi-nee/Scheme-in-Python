@@ -1,0 +1,4 @@
+docs - contains the development documentation
+development - contains workspaces of the puzzles under development
+puzzles - contains the completed puzzles
+builds - final puzzle packages

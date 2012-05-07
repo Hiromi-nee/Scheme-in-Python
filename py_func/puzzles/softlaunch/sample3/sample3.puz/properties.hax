@@ -1,0 +1,39 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Sample III</title>
+  <category>Sample</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>1</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	     Please solve for x:
+	     3x + 5y = 30
+	     10x - 2y = 44
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>Do the simultaneous equation.</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/5/</flag>
+    <model>x = 5, y = 3</model>
+  </solution>
+
+</properties>

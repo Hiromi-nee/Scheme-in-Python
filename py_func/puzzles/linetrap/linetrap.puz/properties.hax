@@ -1,0 +1,52 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Linetrap</title>
+  <category>Application</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>200</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+    <file>
+      <hash>ce608c7dc6be8d6870c31ffaa4ebca28</hash>
+      <filename>ce608c7dc6be8d6870c31ffaa4ebca28.py</filename>
+    </file>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	     The Trapform Text Translation Service is an extremely popular web service<br />
+	     used by developers all over the World. However, there is also, however, a<br />
+	     hidden service used by some awesome hackers to share links and communicate<br />
+	     their awesome plans to rule the World. Most importantly, there is a flag<br />
+	     on the server.<br />
+	     <br />
+	     A (highly-bribed) insider has only this to tell us: "Each service is mapped<br />
+	     to a function in the ServiceProvider class. The ServiceProvider class has<br />
+	     undocumented, private but useful functions closed to users but used by us<br />
+	     to debug and manage the server."<br />
+	     <br />
+	     Please retrieve this flag. Attached is a client to connect to the service.
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>The Python script is easily modifiable.</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/420chan.org\/cd\/isseedy/</flag>
+    <model>The abstract protocol is a custom protocol nested in a netstring protocol. The first user defined field is service that corresponds to a function name on the server. The second is the data is processed. If the admin service is used (by modifying the client or sending a string manually), one has access to fields containing data which is accessed by passing the name of the field in the text. The flag is in the 'flag' field.</model>
+  </solution>
+
+</properties>

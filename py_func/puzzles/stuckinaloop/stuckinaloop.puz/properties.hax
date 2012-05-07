@@ -1,0 +1,44 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Stuck In A Loop</title>
+  <category>Binary</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>200</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+    <file>
+      <hash>2cec76fa4c2cf117e6b4d030bc744ebb</hash>
+      <filename>2cec76fa4c2cf117e6b4d030bc744ebb.elf64</filename>
+    </file>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	     We can't get this program to print anything other than an apology<br />
+	     about spamming us. Please try to get it to print something else.	     
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>It's not a stripped binary.</hint>
+    <hint>Waiting for it to print something else might take a _LONG_ time.</hint>
+    <hint>GDB is your friend.</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/WouldYouLikeGreenEggsAndSpam\?/</flag>
+    <model>The binary is in a not-quite-infinite loop. Open the binary in gdb, break on main, jump to the printGalf() function.</model>
+  </solution>
+
+</properties>

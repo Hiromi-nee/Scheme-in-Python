@@ -1,0 +1,50 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>lol'd it</title>
+  <category>Application</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>200</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+    <file>
+      <hash>080a2f1e99533d2a26009c1d6e86115f</hash>
+      <filename>080a2f1e99533d2a26009c1d6e86115f.jar</filename>
+    </file>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	     An IT student was shocked to see how many servers were compromised on the Internet everyday.
+	     He decided that the best way to reduce the rate of attacks was to do as little server-side processing as possible.
+	     
+	     And to use cryptography. (or at least what his idea of cryptography is)
+	     
+	     He coded a little Java application to retrieve and display flags after authenticating a username/password set as defined by an authentication server. This IT student went very very wrong somewhere.
+	     
+	     Please log in successfully and retrieve the flag.
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>IT Students learn Java as their main programming language at DMIT!</hint>
+    <hint>Unfortunately, most don't learn good security practices.</hint>
+    <hint>This is probably the most derped up method to authenticate.</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/RegexIsImportantPleaseLearnItApparentlyDITDoesnt/</flag>
+    <model>The application makes a get request to the authentication server to retrieve a passlist. Intercept the response and notice that it is a set of values. The first value is the password disguised to look like a base64 reversed md5 hash while the second is the username. Enter in any one of the usernames/passwords. A second method is to decompile the jar file and to rot13 the hardcoded flag.</model>
+  </solution>
+
+</properties>

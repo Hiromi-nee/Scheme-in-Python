@@ -1,0 +1,41 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>A Rose, By Any Other Name, Would Smell As Sweet</title>
+  <category>Programming</category>
+  <author>amon</author>
+  <version>1</version>
+  <points>300</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+    <file>
+      <hash>8970a3a9856b8f342340191986cbcfee</hash>
+      <filename>8970a3a9856b8f342340191986cbcfee.tar.gz</filename>
+    </file>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	     At the end of this, you'd probably rather read Shakespheare.<br />
+	     (because who wouldn't want to? He kicks ass.)
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/The Power of Three Will Set Us Free/</flag>
+    <model>Find out how to solve the Petals Around a Rose problem. Then write a script to automate that.</model>
+  </solution>
+
+</properties>

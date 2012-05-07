@@ -1,0 +1,6 @@
+Plain: 4chan is better than 9gag.
+Rot13: 4puna vf orggre guna 9tnt.
+Base64: NHB1bmEgdmYgb3JnZ3JlIGd1bmEgOXRudC4=
+urlencode: NHB1bmEgdmYgb3JnZ3JlIGd1bmEgOXRudC4%3D
+
+md5sum: 4238876eb8faa69f09befef878cb2125

@@ -1,0 +1,40 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Gypsy</title>
+  <category>Steganography</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>100</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+    <file>
+      <hash>c9850174da17e63a64d6f0685e0a2aa4</hash>
+      <filename>c9850174da17e63a64d6f0685e0a2aa4</filename>
+    </file>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>Sight is for the Weak.</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/Django Reinhardt/i</flag>
+    <model>Find out that the file is an mp3 file. Listen to the audio: in the middle a voice will say that the flag is 'Django Reinhardt'. Google is perhaps needed to identify the exact spelling of the name.</model>
+  </solution>
+
+</properties>

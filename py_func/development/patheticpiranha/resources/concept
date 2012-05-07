@@ -1,0 +1,15 @@
+Large Overview: Participants have to exploit a P2P-Based Chat System to intercept/receive messages meant for another node on the system to retrieve the flag.
+
+Node Table Update 
+client1 -> broadcast(name, listenport): UPDATE CACHE <NAME> <PORT> -> client2
+client2 updates cache
+
+Send Message to Node
+scenario: client2 wants to send a message to name(client1)
+client2 looks up Node Table, if client1 exists, then
+    client2 -> SEND MESSAGE <NAME> <MESSAGE> on client1
+        if <NAME> is client1 then
+	    print <MESSAGE>
+else
+    report error
+	

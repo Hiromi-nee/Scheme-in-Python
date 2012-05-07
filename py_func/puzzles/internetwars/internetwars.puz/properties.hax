@@ -1,0 +1,39 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Internet Wars</title>
+  <category>Crypto</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>100</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	     NHB1bmEgdmYgb3JnZ3JlIGd1bmEgOXRudC4%3D<br />
+	     <br />
+	     Please leave your answer as md5(decoded_text).
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>Well, it isn't exactly encryption.</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/4238876eb8faa69f09befef878cb2125/i</flag>
+    <model>urldecode, then base64 decode, then rot13, then md5 the result.</model>
+  </solution>
+
+</properties>

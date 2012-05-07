@@ -1,0 +1,62 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Toothbrush Mustaches are So Last Season</title>
+  <category>Crypto</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>200</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+    <file>
+      <hash>5c045115b1ba1aa3a240ca4194f1336e</hash>
+      <filename>5c045115b1ba1aa3a240ca4194f1336e.txt</filename>
+    </file>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	     A young woman, Hannah, receives a call from her brother late on a Saturday night.<br />
+	     He sounded frantic, speaking in semi-incoherent tones about 'some tramp'.<br />
+	     He suddenly screams and the connection cuts off. She worries about her brother.<br /> 
+	     He had recently started his own cafe business and showed signs of stress over<br />
+	     the running of the establishment.<br />
+	     <br />
+	     Hannah hurries over to his house and finds the house dark.<br />
+	     She enters through the front door and a number of lit screens (computers, cell phones,<br />
+	     and even the display of an old VCD player) leers at her.<br /> 
+	     Printed on every one of those displays is a cryptic series of letters and numbers,<br /> 
+	     '24542414203e4fb6fea07'.<br /> 
+	     <br />
+	     She finds the body of her brother in the bathroom soaking in a bath of bloody pink water,<br />
+	     his wrists slit and a sodden note clutched between his fingers.<br /> 
+	     <br />
+	     Hannah screams.<br />
+	     <br />
+	     Included in this puzzle is the note.<br />
+	     Please help Hannah find out what her brother was trying to tell her.<br />
+	     Leave your answer in the consistent format her brother chose.<br />
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>No hints required honestly. Ample are given through the story.</hint>
+    <hint>Hannah's brother was an enthusiast of the arcane art of Cryptology and particularly loved simple ciphers and their operations.</hint>
+    <hint>Perhaps one should read not what is there but what is not.</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/cafedefaced0a11c105ed/i</flag>
+    <model>Simply take out the missing letters from the note (eeaafaeeeeeeeeaaeefea) and convert them to hexadecimal (0xeeaafaeeeeeeeeaaeefea). Do the same thing to the cryptic series given (0x24542414203e4fb6fea07). Now XOR and hex them [hex(0xeeaafaeeeeeeeeaaeefea^0x24542414203e4fb6fea07)]. You would obtain the hex message (0xcafedefaced0a11c105ed) and take out the text (cafedefaced0a11c105ed). The message reads "Cafe defaced. All closed."</model>
+  </solution>
+
+</properties>

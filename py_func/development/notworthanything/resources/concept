@@ -1,0 +1,1 @@
+Django Web Application that presents pairs of images. One is supposed to pick the 'correct' answers from the pairs (which is randomly pre-generated) for 50 consecutive tries. A binary tree could be populated randomly with the md5 sums of the images.
