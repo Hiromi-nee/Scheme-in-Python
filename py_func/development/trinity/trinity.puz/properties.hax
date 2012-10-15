@@ -1,0 +1,46 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Fret Not</title>
+  <category>Fun</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>300</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	     E0 E3 E5 E7 E8 E7 E5 B7 B3 B3 B5 B8 B5 B5 B4 B5 B7 B4<br />
+	     B0 E0 E3 E5 E7 E8 E7 E5 B7 B3 B3 B5 B8 B7 B5 B4 B2 B4<br />
+	     B5 EA EA E9 E7 E5 B7 B3 B3 B5 B8 B5 B5 B4 B5 B7 B4 B0<br />
+	     EA EA E9 E7 E5 B7 B3 B3 B5 B8 B7 B5 B4 B2 B4 B5 B5<br />
+	     <br />
+	     What is the title? Flag is the answer and is not case sensitive.
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>Waveforms. Vibrations. Tinsel.</hint>
+    <hint>They resemble a byte but do not be fooled.</hint>
+    <hint>Listen carefully.</hint>
+    <hint>Perhaps you'd like to take a moment and look at your game scores? Or maybe even look at another window.</hint>
+    <hint>http://www.gootar.com/tabber.html</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/greensleeves/i</flag>
+    <model>Each group of numbers represents a note in the form of AB. A represents the string high E or B on a guitar. B represents the fret of which to play. Playing the sequence will yield a familiar tune. The answer is the name of this tune.</model>
+  </solution>
+
+</properties>

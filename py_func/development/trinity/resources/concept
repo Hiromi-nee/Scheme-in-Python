@@ -1,0 +1,26 @@
+Concept:
+A player controlled piece of hardware (POH) is deployed in a random location in a two dimensional grid. The grid is populated with energy cores, hostile and mobile robot guards, stationary surveillance nodes, and impassable fields of debris.
+
+The piece of hardware consists of wheels providing n/s/e/w degrees of movement, a camera with in-built visual recognition that grants field of view vision (assuming the POH is facing north, vision is granted northwest, north, northeast, and twice north), and a destructive device pre-programmed to damage the energy cores. The POH is unable to communicate with the player due to lack of battery power to sustain conversation. The POH has a damage tolerance of X. When this reaches 0, the POH will send a message to the player with dedicated battery pack. The message is a log of events. The POH runs on a firmware written by the player and loaded before it is sent onto the grid. 
+
+Energy cores power crucial neuro-hallucigenic chambers designed to keep scores of imprisoned humans in an illusory state. (Story to develop later: imprisonment of humans with nodes plugged into their cortexes in order to stimulate experiences all for the enjoyment of an external audience.)
+
+Robot guards guard energy cores. They move in a pattern defending the cores. Guards have short vision (assuming it is facing north, it has vision northwest, north, and northeast.). It attacks the POH on sight. It can remove one damage reduction level every X ticks. It is granted extra vision (2 distance in a semicircle in front of it) after getting sight of POH. It chases the POH until losing sight of it.
+
+Surveillance nodes are stationary hostiles with omnidirectional vision. It attacks the POH on sight. It removes two damage reduction levels every X ticks.
+
+The objective is to program the POH to navigate through the energy core grid in order to place the POH adjacent to any energy core, face it, and destroy the core. There are X cores. Once the cores are destroyed, the robot is required to move towards a coordinate given to the POH at the launch point.
+
+Time is measured in ticks. The POH has a level of battery power measured in percentages. The POH starts with 100% power. Every 1% is burned every X ticks. Program opcodes also consume ticks.
+
+The player is presented with a prompt asking for base64 armoured input. This input is the program to be loaded into the memory of the POH at the time of launch. The program has to manage the POH autonomously without radio control due to power issues. The program is sent in machine code. After the program is received on the server, the POH is run until it achieves its objective, is damaged to the point of of failure, or its battery runs out.
+
+The player controls the POH hardware functions in the machine code through interrupts.
+
+
+The Grid
+
+Key:
+0x0 - empty traversable space
+0x1 - POH
+0x2 - Cores
