@@ -1,0 +1,43 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Middle Earth</title>
+  <category>Forensics</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>100</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+    <file>
+      <hash>7471df68c11672f384ea33ffa9dbbdce</hash>
+      <filename>7471df68c11672f384ea33ffa9dbbdce</filename>
+    </file>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	     <i>The lights told me there was a viking in this thing.<br />
+	     I'm too scared to hear what it has to tell me. Please find the<br />
+	     message.
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>The signature of the blonde haired and the short are often pretty.</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/THEY\'RE TAKING THE HOBBITS TO ISENGARD\!/i</flag>
+    <model>Fix the JPEG file header.</model>
+  </solution>
+
+</properties>

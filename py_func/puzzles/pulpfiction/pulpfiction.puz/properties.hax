@@ -1,0 +1,43 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Pulp Fiction</title>
+  <category>Steganography</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>000</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+    <file>
+      <hash>1f2bddafcba00c4658c6089ec906aac6</hash>
+      <filename>pulpfiction.png</filename>
+    </file>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	"What" ain't no country I've ever heard of. They speak English in What? 
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>Stego</hint>
+    <hint>Stego</hint>
+    <hint>Stego</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/437dd15b5e9bd359aed5c78f9823bf02/</flag>
+    <model>Obtain the difference mask between the given image and another image with flattened palette. Interpret the '/' as 1s and '\' as 0s. These assemble to form groups in 7 bits which translate to ASCII characters. They will produce a url http://www.youtube.com/watch?v=Ik-RsDGPI5Y. The video is the iconic dance scene from the film Pulp Fiction. It is set to the song You Never Can Tell by Chuck Barry. md5 "Chuck Barry:You Never Can Tell" as per the instructions in the difference mask to obtain the flag.</model>
+  </solution>
+
+</properties>

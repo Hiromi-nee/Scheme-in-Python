@@ -1,0 +1,45 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Your First Binary</title>
+  <category>Binary</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>200</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+    <file>
+      <hash>b557815e15df7465b825b34d6af84bbd</hash>
+      <filename>b557815e15df7465b825b34d6af84bbd</filename>
+    </file>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+    	     We have found this binary lying in one of our public ftp servers. <br />
+	     It seems to be a game of some sort, asking for a guess in its arguments on the command line. <br />
+	     <br />
+	     We cannot seem to get the answer out of the game. Can you give it a try? <br />
+	     In addition, an expert has advised us to try something called GDB on Linux. She said to get a 'list' or something. <br />
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>Run GDB</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/16003008/</flag>
+    <model>The binary is not stripped and was compiled with debugging symbols. This means we get the source code. Doing 'list' after opening the file in GDB shows us the source of the binary. From there we can find out that the password is 3133742. Then it tells us to do the following: (((3133742 * 42) + 42) % 1337)**3. The result is our flag: 16003008.</model>
+  </solution>
+
+</properties>

@@ -1,0 +1,41 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Moonlight</title>
+  <category>Fun</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>200</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+    <file>
+      <hash>4b8d4f14a69281c71e332b531d82c7d8</hash>
+      <filename>4b8d4f14a69281c71e332b531d82c7d8.ogg</filename>
+    </file>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	     Quel est le nom de famille du compositeur qui a écrit cette pièce magnifique?
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>Try being a little more audacious.</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/debussy/i</flag>
+    <model>Google translate the French: What is the name of the composer who wrote this beautiful piece?. Use Audacity. Apply reverse and set the speed from 78 RPM to 33 1/3 RPM. The song should be recognisable as Claire de Lune by Claude Debussy. The answer is Debussy.</model>
+  </solution>
+
+</properties>

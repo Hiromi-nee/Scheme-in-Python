@@ -24,3 +24,61 @@ Key:
 0x0 - empty traversable space
 0x1 - POH
 0x2 - Cores
+0x3 - Tower
+0x4 - Guard
+
+
+CPU
+
+The instruction set will be a 16 bit, fixed width (32 bits), word aligned instruction set.
+Format for instructions in terms of bits will be:
+
+AAAAAAAA XXXXXXXX BBBBBBBB CCCCCCCC 
+
+A = Opcode
+X = Values
+B = Value Parameter
+C = Opcode Parameter
+
+Values:
+0x0-0x8: register (r1-r8)
+0x8-0x10: [register] ([r1]-[r8])
+0x10-0x18: [register + param]
+0x18-0x20: [register - param]
+0x21: instruction pointer (ip)
+0x22: [ip]
+0x23: [ip + param]
+0x24: [ip - param]
+0x25: base pointer (bp)
+0x26: [bp]
+0x27: [bp + param]
+0x28: [bp - param]
+0x29: stack pointer (sp)
+0x2A: [sp]
+0x2B: [sp + param]
+0x2C: [sp - param]
+0x2D: overflow (of)
+0x2E: [param]
+0x2F: literal (takes the value of the next word)
+0x30-0x5F: literal bytes of 0x0-0x2F
+
+
+Opcodes:
+0x1: set a, b - sets a to b
+0x2: ADD a, b - sets a to a+b, sets O to 0x0001 if there's an overflow, 0x0 otherwise
+    0x3: SUB a, b - sets a to a-b, sets O to 0xffff if there's an underflow, 0x0 otherwise
+    0x4: MUL a, b - sets a to a*b, sets O to ((a*b)>>16)&0xffff
+    0x5: DIV a, b - sets a to a/b, sets O to ((a<<16)/b)&0xffff. if b==0, sets a and O to 0 instead.
+    0x6: MOD a, b - sets a to a%b. if b==0, sets a to 0 instead.
+    0x7: SHL a, b - sets a to a<<b, sets O to ((a<<b)>>16)&0xffff
+    0x8: SHR a, b - sets a to a>>b, sets O to ((a<<16)>>b)&0xffff
+    0x9: AND a, b - sets a to a&b
+    0xa: BOR a, b - sets a to a|b
+    0xb: XOR a, b - sets a to a^b
+    0xc: IFE a, b - performs next instruction only if a==b
+    0xd: IFN a, b - performs next instruction only if a!=b
+    0xe: IFG a, b - performs next instruction only if a>b
+    0xf: IFB a, b - performs next instruction only if (a&b)!=0
+
+DCPU-16
+We will implement the DCPU-16 instead and grant the assignment of a non-basic opcode to the function of an interrupt.
