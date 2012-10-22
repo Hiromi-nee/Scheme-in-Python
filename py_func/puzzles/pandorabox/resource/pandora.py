@@ -34,7 +34,6 @@ def proc(r_input, secret_bytes):
         p_input += struct.pack("<BB", ~r1 & 0xff, r2)
 
     f_out =[]
-    print pandora
     for i in range(len(p_input)):
         f_out.append(ord(p_input[i]) ^ ord(secret_bytes[i]) ^ ord(pandora[i%len(pandora)]))
 
