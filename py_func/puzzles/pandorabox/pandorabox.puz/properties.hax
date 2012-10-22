@@ -1,0 +1,43 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Pandora's Box</title>
+  <category>Cryptography</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>000</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+    <file>
+      <hash>1fb29f31aaa94da13716855fe3eb0cca</hash>
+      <filename>pandora.py</filename>
+    </file>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	Give us the md5 checksum of the secret_file on the server xxx.xxx.xxx.xxx.
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>http://xkcd.com/153/.</hint>
+    <hint>What would the answer be to Life, The Universe, and Everything?.</hint>
+    <hint>XORs are not exponents.</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/3dbfefa84bafd39181c5126aa069ce26/</flag>
+    <model>Craft p_input to be all 0x00 bytes for 998 bytes. Obtain the pandora box by grabbing the repeating 7 bytes at the end. Apply the pandora box to the first 238 bytes to obtain the plain text. md5sum the file to obtain the hash.</model>
+  </solution>
+
+</properties>

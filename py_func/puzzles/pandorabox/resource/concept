@@ -1,0 +1,29 @@
+algorithm:
+
+secret - variable length bytes in multiple of 2
+pandora - fixed length salt values
+r_input - raw variable user input
+
+pre:
+read secret
+pandora = secret[:7]
+
+process:
+
+get r_input
+if str(r_input) % 0:
+   return
+if len(input) > len(secret):
+   pad secret with 0x00 until the len is eq
+p_input = ""
+for i in range(0, len(input), 2):
+    r1 = (~(ord(input[i]) & 0xfc) & 0xff) + (ord(input[i+1]) & 0x03)
+    r2 = ((ord(input[i]) & 0x03) << 4) + ((ord(input[i+1]) & 0xfc) >> 4)
+    p_input += struct.pack("<BB", ~r1 & 0xff, r2)
+f_out = []
+for i in range(len(p_input)):
+    f_out.append(ord(p_input[i]) ^ ord(secret[i]) ^ ord(pandora[i%len(pandora)]))
+"".join(chr(i) for i in f_out)
+    
+    
+
