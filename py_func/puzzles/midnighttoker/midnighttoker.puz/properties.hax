@@ -1,0 +1,47 @@
+<properties>
+
+  <!-- nfo -->
+  <!-- all informational fields -->
+  <title>Midnight Toker</title>
+  <category>Forensics</category>
+  <author>amon</author>
+  <version>0</version>
+  <points>000</points>
+
+  <!-- files -->
+  <!-- list of files included in the puzzle package -->
+  <distributables>
+    <file>
+      <hash>f33fe9509d4f766d1574759907dab6dc</hash>
+      <filename>midnighttoker.ogg</filename>
+    </file>
+    <file>
+      <hash>36e04694f34ff60b10c69701e6a27fe8</hash>
+      <filename>littlewing.png</filename>
+    </file>
+  </distributables>
+
+  <!-- descriptions -->
+  <!-- puzzle description to be written to source -->
+  <description>
+    <![CDATA[
+	Ahh, the sweet 80's. T'was a time of the greats: Dio, Alice Cooper, Hendrix, the Styx... The sound brings back memories. But something's not quite vintage about this.
+    ]]>
+  </description>
+      
+  <!-- hints -->
+  <!-- list of hints to be sequentially given out -->
+  <hints>
+    <hint>One of these two things isn't music. It's magical data.</hint>
+    <hint>Trippy like a raw wave.</hint>
+    <hint>Synesthesia, I see with my ears.</hint>
+  </hints>
+
+  <!-- solution -->
+  <!-- regex of accepted flag and a short description on the model solution -->
+  <solution>
+    <flag>/d3c4y_0F_c0nt3mp0r4ry_cu1tur3/</flag>
+    <model>Decode the audio to convert the bits at 44100 bits/sample/sec. Each peak is a 1, each trough is 0. Arrange these bits in a 2d perfect square and paint them in a 1000x1000 pixels image. This is a QR code. Decode the QR code to obtain the text -- The flag is: "d3c4y_0F_c0nt3mp0r4ry_cu1tur3". Enjoy some George Gershwin -- http://www.youtube.com/watch?v=uyaj2P-dSi8.</model>
+  </solution>
+
+</properties>

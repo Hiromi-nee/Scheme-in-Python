@@ -29,8 +29,8 @@ def proc(r_input, secret_bytes):
 
     p_input= ""
     for i in range(0, len(r_input), 2):
-        r1 = (~(ord(r_input[i]) & 0xfc) & 0xff) + (ord(r_input[i+1]) & 0x03)
-        r2 = ((ord(r_input[i]) & 0x03) << 4) + ((ord(r_input[i+1]) & 0xfc) >> 4)
+        r1 = (ord(r_input[i]) & 0xfc) + ((~ord(r_input[i+1]) & 0xff) & 0x03)
+        r2 = ((ord(r_input[i]) & 0x01) << 6) + (~((ord(r_input[i+1]) & 0xfc) >> 2) & 0xff) & 0x80
         p_input += struct.pack("<BB", ~r1 & 0xff, r2)
 
     f_out =[]

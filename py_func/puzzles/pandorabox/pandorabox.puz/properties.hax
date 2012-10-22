@@ -12,7 +12,7 @@
   <!-- list of files included in the puzzle package -->
   <distributables>
     <file>
-      <hash>066135963d626b46e222c0b2e56fcd69</hash>
+      <hash>82cac9122240b376e458bf4fee5d6b6d</hash>
       <filename>pandora.py</filename>
     </file>
   </distributables>
