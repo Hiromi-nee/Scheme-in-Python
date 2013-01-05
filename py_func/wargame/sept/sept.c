@@ -1,4 +1,4 @@
-// compiled with gcc -m32 -fno-stack-protector -mpreferred-stack-boundary=2 -o sept sept.c
+// compiled with gcc -m32 -fno-stack-protector -zexecstack -mpreferred-stack-boundary=2 -o sept sept.c
 
 void generate_stack(void (*cb) (int));
 void squeezebox_cb();
